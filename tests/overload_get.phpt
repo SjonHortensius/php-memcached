@@ -6,9 +6,9 @@ Test overloading get-method
 <?php
 class test_overload_get extends Memcached
 {
-  public function get($key, $cache_cb = null, &$cas_token = null)
+  public function get($key, $cache_cb = null, $get_flags = 0)
   {
-    return parent::get($key, $cache_cb, $cas_token);
+    return parent::get($key, $cache_cb, $get_flags);
   }
 }
 echo "GOT HERE";
